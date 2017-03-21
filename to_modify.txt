@@ -1,0 +1,14 @@
+- Replace resolv.conf IP addresses to google IP (instead of China IPs)
+    nameserver 8.8.8.8
+    nameserver 8.8.4.4
+
+- To start telnet service:
+    Remove etc/checktelnetflag file
+    edit "opentelnet.sh" file put this content:
+-----CUT HERE -------------------------------------
+#!/bin/sh
+  sed -i "s|:/root:/sbin/nologin|:/root:/bin/sh|" /etc/passwd
+  telnetd &
+  /etc/init.d/etcsync
+-----CUT HERE -------------------------------------
+

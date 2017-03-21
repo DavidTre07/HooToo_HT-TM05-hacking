@@ -1,4 +1,11 @@
 #HooToo HT-TM05 hacking stuff and junk
+####David's adds
+20170321:
+* Updated script with version: HooToo TM05-Support exFAT&HFS - 2.000.068.zip
+* Updated script with some checks
+* Added file to recommended modification to be done inside the image (to_modify.txt)
+
+
 ####theodric's edition
 
 See the thread on the OpenWRT forum for more information: https://forum.openwrt.org/viewtopic.php?id=61445
