@@ -2,6 +2,12 @@
     nameserver 8.8.8.8
     nameserver 8.8.4.4
 
+- The web interface configure ntp servers to asia
+  so replace ntp servers with worldwide
+    In www/script/app/system/time.js
+    Replace [0-3].asia.pool.ntp.org
+    With [0-3].pool.ntp.org
+
 - To start telnet service:
     Remove etc/checktelnetflag file
     edit "opentelnet.sh" file put this content:
