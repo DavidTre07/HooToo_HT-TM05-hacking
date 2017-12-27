@@ -24,10 +24,15 @@ cp $CD/../files/time.js www/script/app/system/time.js
 
 cd $WD
 echo "Re squashing fs..."
-$CD/squish.sh $WD/squashfs-root rootfs
-rm -fr $WD/squashfs-root
-mv $WD/rootfs mount/firmware/rootfs
+$CD/squish.sh squashfs-root rootfs
+rm -fr squashfs-root
+mv rootfs mount/firmware/rootfs
 sync
 umount mount
 gzip initrdup
+cat start_script.sh initrdup.gz > newfirmware
+
+CRC=`$CD/checksum_tool.sh newfirmware`
+echo "New CRC: $CRC"
+sed -i -e"s/^CRCSUM=.*/CRCSUM=$CRC/" start_script.sh
 cat start_script.sh initrdup.gz > newfirmware
