@@ -1,10 +1,22 @@
 #!/bin/bash
 
+#David Tre (david.tre07@gmail.com)
+#https://github.com/DavidTre07
+
+# This script will patch downloaded and mounted firmware image
+
+#TODO:
+#   - Verify if squashfs tools are installed
+#   - Add check on each steps to be sure that it is really patched
+#   - files folder organization: Create a tree of files so script need just to copy file inside firmware image
+
+#Current directory of the script
 CD=$(dirname $(readlink -f $0))
+#Working directory
 WD="/tmp/hootoo/"
 
 cd $WD
-#Unsquashfs
+#Unsquashfs, TODO: Add a check to test if present
 cp mount/firmware/rootfs .
 unsquashfs rootfs || exit 1
 rm rootfs
