@@ -9,8 +9,10 @@ MOUNTDIR=${WD}/mount
 # ARCH_FILENAME is the name of the compressed archive we download from hootoo
 # (it used to be a .zip, but now it's a .rar, no now it's back zip !!!)
 # UPDATE_FILENAME is the name of the update file we get from the compressed archive
-ARCH_FILENAME="HooToo%20TM05-Support%20exFAT&HFS%20-%202.000.068.zip"
-UPDATE_FILENAME="fw-7620-WiFiDGRJ-HooToo-HT-TM05-2.000.068"
+#ARCH_FILENAME="HooToo%20TM05-Support%20exFAT&HFS%20-%202.000.068.zip"
+#UPDATE_FILENAME="fw-7620-WiFiDGRJ-HooToo-HT-TM05-2.000.068"
+ARCH_FILENAME="fw-HT-TM05-2.000.070.zip"
+UPDATE_FILENAME="fw-7620-WiFiDGRJ-HooToo-HT-TM05-2.000.070"
 
 UPDATE_URL="http://www.hootoo.com/media/downloads/${ARCH_FILENAME}"
 
